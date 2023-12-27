@@ -12,6 +12,12 @@
 </head>
 
 <body>
+    <form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>
+        <label for="word_list">Nhập danh sách (cách nhau bằng dấu phẩy):</label>
+        <input type="text" name="word_list" id="word_list" required>
+        <br>
+        <input type="submit" name="submit" value="Chọn ngẫu nhiên">
+    </form>
     <?php
     function getRandomWord($words) {
         $randomIndex = rand(0, count($words) - 1);
@@ -28,12 +34,6 @@
         echo "Ngẫu nhiên từ danh sách là: $selectedWord";
     }
     ?>
-    <form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>
-        <label for="word_list">Nhập danh sách (cách nhau bằng dấu phẩy):</label>
-        <input type="text" name="word_list" id="word_list" required>
-        <br>
-        <input type="submit" name="submit" value="Chọn ngẫu nhiên">
-    </form>
 </body>
 
 </html>
