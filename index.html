@@ -28,7 +28,7 @@
         echo "Ngẫu nhiên từ danh sách là: $selectedWord";
     }
     ?>
-    <form method="post">
+    <form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>
         <label for="word_list">Nhập danh sách (cách nhau bằng dấu phẩy):</label>
         <input type="text" name="word_list" id="word_list" required>
         <br>
